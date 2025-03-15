@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-gray-50 text-gray-900 transition-colors duration-200 dark:bg-dark-800 dark:text-gray-100;
+  }
+  h1 {
+    @apply text-3xl font-bold md:text-4xl;
+  }
+  h2 {
+    @apply text-2xl font-bold md:text-3xl;
+  }
+  h3 {
+    @apply text-xl font-bold md:text-2xl;
+  }
+  select {
+    @apply block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-gray-900 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:border-dark-500 dark:bg-dark-700 dark:text-white;
+  }
+  button {
+    @apply rounded-md px-4 py-2 font-medium shadow-sm transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md border px-4 py-2 font-medium shadow-sm transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply btn border-primary-700 bg-primary-600 text-white hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:border-primary-800 dark:bg-primary-700 dark:hover:bg-primary-600;
+  }
+  
+  .btn-secondary {
+    @apply btn border-gray-300 bg-gray-200 text-gray-800 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:border-dark-500 dark:bg-dark-600 dark:text-gray-200 dark:hover:bg-dark-500;
+  }
+  
+  .card {
+    @apply rounded-lg bg-white p-6 shadow-md dark:bg-dark-700;
+  }
+  
+  .form-select {
+    @apply block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-gray-900 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-primary-500 dark:border-dark-500 dark:bg-dark-700 dark:text-white;
+  }
+  
+  /* Result variations with improved styling */
+  .result-normal {
+    @apply border-l-4 border-green-500 bg-green-50 dark:bg-green-900/20;
+  }
+  
+  .result-impaired {
+    @apply border-l-4 border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20;
+  }
+  
+  .result-elevated {
+    @apply border-l-4 border-red-500 bg-red-50 dark:bg-red-900/20;
+  }
+  
+  /* Form element focus styles */
+  .form-input:focus, .form-select:focus, .form-textarea:focus {
+    @apply border-primary-500 ring-2 ring-primary-500 ring-opacity-50;
+  }
+  
+  /* Details/summary styling */
+  details {
+    @apply rounded-md;
+  }
+  
+  details summary {
+    @apply cursor-pointer px-4 py-2 font-medium hover:bg-gray-100 dark:hover:bg-dark-600;
+  }
+  
+  details > div {
+    @apply px-4 py-2;
+  }
+}
